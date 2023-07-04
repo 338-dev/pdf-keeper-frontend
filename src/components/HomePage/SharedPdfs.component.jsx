@@ -43,7 +43,7 @@ const SharedPdfs = () => {
     },
   ];
   const fetchPDFs = async () => {
-    fetch("https://combative-bear-houndstooth.cyclic.app/file/viewAll/shared", {
+    fetch("https://newt-garters.cyclic.app/file/viewAll/shared", {
       headers: {
         jwt: localStorage.getItem("jwt"),
       },

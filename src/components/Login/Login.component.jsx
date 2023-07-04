@@ -36,7 +36,7 @@ const Login = () => {
     if (error) {
       toast.error(error.message);
     } else {
-      fetch("https://combative-bear-houndstooth.cyclic.app/user/login", {
+      fetch("https://newt-garters.cyclic.app/user/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

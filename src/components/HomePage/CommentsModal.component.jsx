@@ -16,7 +16,7 @@ const CommentsModal = ({
       toast.error("Comments should be more than 3 letters");
       return;
     }
-    fetch(`https://combative-bear-houndstooth.cyclic.app/file/comments/${fileDetails.securedUuid}`, {
+    fetch(`https://newt-garters.cyclic.app/file/comments/${fileDetails.securedUuid}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

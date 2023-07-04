@@ -14,7 +14,7 @@ const PDFViewer = () => {
 
   useEffect(() => {
     if (pathname) {
-      fetch(`https://combative-bear-houndstooth.cyclic.app/file/view/${pathname}`, {
+      fetch(`https://newt-garters.cyclic.app/file/view/${pathname}`, {
         headers: {
           jwt: localStorage.getItem("jwt"),
         },

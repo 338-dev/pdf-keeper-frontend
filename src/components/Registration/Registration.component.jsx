@@ -43,7 +43,7 @@ const Register = () => {
     if (error) {
       toast.error(error.message);
     } else {
-      fetch("https://combative-bear-houndstooth.cyclic.app/user/register", {
+      fetch("https://newt-garters.cyclic.app/user/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

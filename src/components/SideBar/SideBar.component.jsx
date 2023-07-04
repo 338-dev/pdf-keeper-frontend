@@ -28,7 +28,7 @@ export const FileUploadModal = ({
   };
 
   const uploadFileToServer = (file) => {
-    fetch("https://combative-bear-houndstooth.cyclic.app/file/create", {
+    fetch("https://newt-garters.cyclic.app/file/create", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

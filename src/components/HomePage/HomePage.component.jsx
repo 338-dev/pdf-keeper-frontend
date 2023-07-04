@@ -69,7 +69,7 @@ const HomePage = () => {
     },
   ];
   const fetchPDFs = async () => {
-    fetch("https://combative-bear-houndstooth.cyclic.app/file/viewall", {
+    fetch("https://newt-garters.cyclic.app/file/viewall", {
       headers: {
         jwt: localStorage.getItem("jwt"),
       },
@@ -105,7 +105,7 @@ const HomePage = () => {
     if (error) {
       toast.error(error.message);
     } else {
-      fetch(`https://combative-bear-houndstooth.cyclic.app/file/share/${sharedFileUuid}`, {
+      fetch(`https://newt-garters.cyclic.app/file/share/${sharedFileUuid}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -139,7 +139,7 @@ const HomePage = () => {
   };
 
   const shareFileWithTypeOfUser = (obj) => {
-    fetch(`https://combative-bear-houndstooth.cyclic.app/file/sharewithType/${sharedFileUuid}`, {
+    fetch(`https://newt-garters.cyclic.app/file/sharewithType/${sharedFileUuid}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
