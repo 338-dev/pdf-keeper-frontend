@@ -14,10 +14,11 @@ const PDFViewer = () => {
 
   useEffect(() => {
     if (pathname) {
-      fetch(`https://newt-garters.cyclic.app/file/view/${pathname}`, {
+      fetch(`https://pdf-keeper.cyclic.app/file/view/${pathname}`, {
         headers: {
           jwt: localStorage.getItem("jwt"),
         },
+        mode: "cors",
       })
         .then(async (response) => {
           if (!response.ok) {

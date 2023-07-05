@@ -69,10 +69,11 @@ const HomePage = () => {
     },
   ];
   const fetchPDFs = async () => {
-    fetch("https://newt-garters.cyclic.app/file/viewall", {
+    fetch("https://pdf-keeper.cyclic.app/file/viewall", {
       headers: {
         jwt: localStorage.getItem("jwt"),
       },
+      mode: "cors",
     })
       .then(async (response) => {
         if (!response.ok) {
@@ -105,8 +106,9 @@ const HomePage = () => {
     if (error) {
       toast.error(error.message);
     } else {
-      fetch(`https://newt-garters.cyclic.app/file/share/${sharedFileUuid}`, {
+      fetch(`https://pdf-keeper.cyclic.app/file/share/${sharedFileUuid}`, {
         method: "PUT",
+        mode: "cors",
         headers: {
           "Content-Type": "application/json",
           jwt: localStorage.getItem("jwt"),
@@ -139,14 +141,18 @@ const HomePage = () => {
   };
 
   const shareFileWithTypeOfUser = (obj) => {
-    fetch(`https://newt-garters.cyclic.app/file/sharewithType/${sharedFileUuid}`, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-        jwt: localStorage.getItem("jwt"),
-      },
-      body: JSON.stringify(obj),
-    })
+    fetch(
+      `https://pdf-keeper.cyclic.app/file/sharewithType/${sharedFileUuid}`,
+      {
+        method: "PUT",
+        mode: "cors",
+        headers: {
+          "Content-Type": "application/json",
+          jwt: localStorage.getItem("jwt"),
+        },
+        body: JSON.stringify(obj),
+      }
+    )
       .then(async (response) => {
         if (!response.ok) {
           return response.text().then((text) => {

@@ -28,8 +28,9 @@ export const FileUploadModal = ({
   };
 
   const uploadFileToServer = (file) => {
-    fetch("https://newt-garters.cyclic.app/file/create", {
+    fetch("https://pdf-keeper.cyclic.app/file/create", {
       method: "POST",
+      mode: "cors",
       headers: {
         "Content-Type": "application/json",
         jwt: localStorage.getItem("jwt"),

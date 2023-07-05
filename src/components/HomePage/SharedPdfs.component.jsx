@@ -43,10 +43,11 @@ const SharedPdfs = () => {
     },
   ];
   const fetchPDFs = async () => {
-    fetch("https://newt-garters.cyclic.app/file/viewAll/shared", {
+    fetch("https://pdf-keeper.cyclic.app/file/viewAll/shared", {
       headers: {
         jwt: localStorage.getItem("jwt"),
       },
+      mode: "cors",
     })
       .then(async (response) => {
         if (!response.ok) {

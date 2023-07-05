@@ -36,11 +36,12 @@ const Login = () => {
     if (error) {
       toast.error(error.message);
     } else {
-      fetch("https://newt-garters.cyclic.app/user/login", {
+      fetch("https://pdf-keeper.cyclic.app/user/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
+        mode: "cors",
         body: JSON.stringify({
           email: email.toLowerCase().trim(),
           password: password,

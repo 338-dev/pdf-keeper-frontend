@@ -43,8 +43,9 @@ const Register = () => {
     if (error) {
       toast.error(error.message);
     } else {
-      fetch("https://newt-garters.cyclic.app/user/register", {
+      fetch("https://pdf-keeper.cyclic.app/user/register", {
         method: "POST",
+        mode: "cors",
         headers: {
           "Content-Type": "application/json",
         },

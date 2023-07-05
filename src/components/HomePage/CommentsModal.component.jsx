@@ -16,16 +16,20 @@ const CommentsModal = ({
       toast.error("Comments should be more than 3 letters");
       return;
     }
-    fetch(`https://newt-garters.cyclic.app/file/comments/${fileDetails.securedUuid}`, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-        jwt: localStorage.getItem("jwt"),
-      },
-      body: JSON.stringify({
-        comment: comment.trim(),
-      }),
-    })
+    fetch(
+      `https://pdf-keeper.cyclic.app/file/comments/${fileDetails.securedUuid}`,
+      {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+          jwt: localStorage.getItem("jwt"),
+        },
+        mode: "cors",
+        body: JSON.stringify({
+          comment: comment.trim(),
+        }),
+      }
+    )
       .then(async (response) => {
         if (!response.ok) {
           return response.text().then((text) => {
